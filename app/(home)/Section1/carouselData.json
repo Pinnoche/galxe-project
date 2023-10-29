@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "PixelSwap",
+    "poster-picture": "/images/1698285342843-Carousel Banner [Tour de DeXcellence].webp",
+    "icon": "/images/0328e671-43d2-4fe7-bb32-27737a8cb67c.png",
+    "caption": "Tour de DeXcellence",
+    "verified": true
+  },
+  {
+    "id": 2,
+    "name": "humanode",
+    "poster-picture": "/images/1698111618180-Dawn of DeFi_Carousel.webp",
+    "icon": "/images/1650949605-logo-1650949604.webp",
+    "caption": "Humanode Anti-Sybil Campaign: Dawn of BioDeFi",
+    "verified": true
+  },
+  {
+    "id": 3,
+    "name": "taiko",
+    "poster-picture": "/images/1695835631981-IMAGE 2023-09-27 13_26_38.jpg",
+    "icon": "/images/233f5252-6c2a-4adf-8799-a310e27a016d.png",
+    "caption": "Watch, Read, and Mint on Taiko (Alpha-5 Jólnir)",
+    "verified": true
+  },
+  {
+    "id": 4,
+    "name": "leo wallet",
+    "poster-picture": "/images/1696556549709-zk.png",
+    "icon": "/images/d6ef5a05-e398-4afa-ba72-756832d023b8.png",
+    "caption": "zkNFT Genesis Campaign - Aleo x Leo Wallet",
+    "verified": true
+  },
+  {
+    "id": 5,
+    "name": "trader joe",
+    "poster-picture": "/images/1697041682794-Final Graphic arbitrum2 1gaxle.png",
+    "icon": "/images/8a33fcc9-6413-4728-9d59-288ff80b29f4.png",
+    "caption": "Arbitrum Adventure",
+    "verified": true
+  },
+  {
+    "id": 6,
+    "name": "manta network",
+    "poster-picture": "/images/1697071475534-IMAGE 2023-10-11 20_44_33.jpg",
+    "icon": "/images/e0e543a8-fbd5-4470-81fb-04d138daa31b.webp",
+    "caption": "💃 🕺 MantaFest",
+    "verified": true
+  },
+  {
+    "id": 7,
+    "name": "Mind Network",
+    "poster-picture": "/images/1698067130748-Galxe banner (1).webp",
+    "icon": "/images/7cedce43-818b-4cbc-9d84-ce5080f758d0.webp",
+    "caption": "New Episode Overture | Social Media Tasks",
+    "verified": true
+  }
+]
