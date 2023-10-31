@@ -1,7 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Navbar from "@/components/Navbar/Navbar";
 import localFont from "next/font/local";
 
 const font = localFont({
@@ -30,7 +29,6 @@ export default function RootLayout({
           "font-sans"
         }
       >
-        <Navbar />
         {children}
       </body>
     </html>
