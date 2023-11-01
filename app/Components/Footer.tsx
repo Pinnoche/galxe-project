@@ -10,22 +10,22 @@ async function Footer() {
     
     return (
         <footer className='bg-my-color px-7 xl:px-20'>
-            <div className='py-12 flex flex-wrap xl:py-20'>
+            <div className='py-12 flex flex-wrap justify-between xl:py-20'>
                 <div className='mb-12 w-full xl:w-fit'>
                     <img className='h-5' src={data.logo} alt="Galxe Logo" />
-                    <p className='mt-5 max-w-lg text-left text-sm font-normal text-footer-color'>
+                    <p className='mt-5 max-w-lg leading-6 text-left text-sm font-normal text-footer-color'>
                         {data.content}
                     </p>
                     <button className='w-fit mt-6 py-3 px-7 border border-footer-button-color  text-footer-button-color rounded-lg font-bold text-base '>
                         {data.latest}
                     </button>                    
                 </div>
-                <div className="flex flex-wrap w-full xl:">
+                <div className="flex flex-wrap justify-between w-full xl:w-6/12">
                     {data.link_head.map((head:String,index:number) => (
-                        <div className="w-1/2 mb-4 md:w-1/4 lg:w-1/5">
-                            <p className="text-sm font-normal text-white mb-3 font-bold ">{head}</p>
+                        <div className="w-1/2 mb-4  md:w-1/4 lg:w-1/5 xl:w-fit">
+                            <p className="text-sm leading-6 font-normal text-white mb-3 font-bold ">{head}</p>
                             {data.links[index].map((link: String)=>(
-                                <a href="/" className="block text-sm font-normal text-footer-color mb-3 ">{link}</a>
+                                <a href="/" className="block text-sm leading-6 font-normal text-footer-color mb-3 ">{link}</a>
                             ))}
                         </div>
                     )    
