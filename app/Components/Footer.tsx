@@ -5,6 +5,9 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 async function Footer() {
+    const file = await fs.readFile(process.cwd() + '../json/footer.json', 'utf8');
+    const data = JSON.parse(file);
+    
     return (
         <footer className='bg-my-color px-7'>
             <div className='py-12 flex'>
