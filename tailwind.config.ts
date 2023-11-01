@@ -15,10 +15,13 @@ const config: Config = {
       },
       backgroundColor: {
         'my-color': '#060708'
+        
       },
       colors: {
         'footer-color': '#ced3db',
-        'footer-button-color': '#0057ff'
+        'footer-button-color': '#0057ff',
+        'footer-light': '#9097a6',
+        'footer2-bgx': '#15171c'
       }
     },
   },
