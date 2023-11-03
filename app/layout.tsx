@@ -3,11 +3,13 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const font = localFont({
   src: "../public/fonts/Mona_Sans/Mona-Sans.woff2",
   variable: "--font-mono-sans",
 });
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -30,7 +32,9 @@ export default function RootLayout({
           "font-sans"
         }
       >
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
