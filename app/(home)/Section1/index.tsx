@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { motion, useAnimate, stagger } from "framer-motion";
-import Carousel from "./carousel";
+import Carousel from "@/components/Carousel";
 import backgroundImage from "@/public/images/top-bg-img.02ddaa0.png";
 
 import icon1 from "@/public/images/BNB.c511f64.png";
