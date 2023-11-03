@@ -103,12 +103,12 @@ const CarouselCards = ({
             onMouseLeave={() => setCardHovered(false)}
             className={`group self-end relative object-cover flex flex-col px-[0.75rem] pt-[0.75rem] text-white capitalize border-[#262632] border rounded-[0.75rem] shrink-0 grow-0 h-[100%]  ${
               item.id === carouselItem
-                ? `w-[32.625rem] h-[24.25rem] -translate-x-[64%] z-[3] -order-[9998]`
+                ? `w-[32.625rem] h-[24.25rem] -translate-x-[66%] z-[3] -order-[9998]`
                 : `w-[28.625rem] h-[22rem] transition-all duration-[5] ease-in`
             } ${
               item.id === decrement()
                 ? "order-first"
-                : item.id === increment() && `-order-[9997] -translate-x-[147%]`
+                : item.id === increment() && `-order-[9997] -translate-x-[150%]`
             }`}
             key={item.id}
           >
