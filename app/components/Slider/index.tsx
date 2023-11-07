@@ -12,13 +12,11 @@ const Slider = ({
   childrenNumber: number;
   children: React.ReactNode;
 }) => {
-  const [buttonClicked, setButtonClicked] = useState("");
   const [slideState, setSlideState] = useState(0);
   const cardRef = useRef<HTMLDivElement>(null!);
   const [appendItems, setAppendItems] = useState<JSX.Element[]>([]);
 
   const leftClickedHandler = () => {
-    setButtonClicked("left");
     setSlideState((prev) => {
       return parseFloat((prev + 100 + 1.333).toFixed(3));
     });
@@ -26,7 +24,6 @@ const Slider = ({
   };
 
   const rightClickedHandler = () => {
-    setButtonClicked("right");
     setSlideState((prev) => {
       return parseFloat((prev - 100 - 1.333).toFixed(3));
     });
@@ -59,7 +56,7 @@ const Slider = ({
           animate={{
             x: `${slideState}%`,
           }}
-          transition={{ duration: 0.8, ease: "linear" }}
+          transition={{ duration: 0.5, ease: "linear" }}
         >
           {children}
           {appendItems}

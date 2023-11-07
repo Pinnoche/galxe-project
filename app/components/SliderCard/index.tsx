@@ -48,13 +48,18 @@ const SliderCard = ({
     <motion.div
       whileHover="hover"
       variants={parentHoverVariant}
-      className="snap-start min-w-[24%] h-[540px] p-[20px] rounded-[12px] text-white bg-[linear-gradient(180deg,#1b1e24,rgba(27,30,36,.65))]"
+      className="snap-start min-w-[24%] h-[33.75rem] p-[1.25rem] rounded-[0.75rem] text-white bg-[linear-gradient(180deg,#1b1e24,rgba(27,30,36,.65))]"
     >
-      <div className="relative object-cover w-[100%] h-[68%] mb-[24px]">
-        <Image className="rounded-[12px]" fill src={image} alt="module image" />
+      <div className="relative object-cover w-[100%] h-[68%] mb-[1.5rem]">
+        <Image
+          className="rounded-[0.75rem]"
+          fill
+          src={image}
+          alt="module image"
+        />
       </div>
-      <div className="flex h-[27.6px]">
-        <div className="relative overflow-x-hidden w-[calc(100%-60px)] h-[100%]">
+      <div className="flex h-[1.725rem]">
+        <div className="relative overflow-x-hidden w-[calc(100%-3.75rem)] h-[100%]">
           <motion.div
             variants={childHoverVariant}
             className="absolute top-0 flex gap-2"
@@ -62,7 +67,7 @@ const SliderCard = ({
             {details_category.map((category, index) => (
               <div
                 key={index}
-                className="rounded-[1000px] py-[3px] px-[14px] border-[hsla(0,0%,100%,.4)] border font-bold whitespace-nowrap leading-[20px] text-[12px]"
+                className="rounded-[62.5rem] py-[0.1875rem] px-[0.875rem] border-[hsla(0,0%,100%,.4)] border font-bold whitespace-nowrap leading-[1.25rem] text-[0.75rem]"
               >
                 {category}
               </div>
@@ -75,13 +80,13 @@ const SliderCard = ({
           <Image src={brushIcon} alt="icon" width={20} height={19} />
         </div>
       </div>
-      <div className="font-bold leading-[24px] text-[16px]  mt-[16px]">
+      <div className="font-bold leading-[1.5rem] text-[1rem]  mt-[1rem]">
         Module {module}: {name}
       </div>
-      <div className="mt-[8px] text-[#ced3db] leading-[22px] whitespace-nowrap text-[14px]">
+      <div className="mt-[0.5rem] text-[#ced3db] leading-[1.375rem] whitespace-nowrap text-[0.875rem]">
         {subtext}
       </div>
-      <div className="flex mt-[12px]">
+      <div className="flex mt-[0.75rem]">
         <div>{participants.toLocaleString()} participants</div>
         <div className="flex gap-2 ml-auto">
           {cohost_icons.map((icon, index) => (
