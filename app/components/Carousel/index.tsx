@@ -3,8 +3,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import carouselData from "./carouselData.json";
-import arrow from "@/public/images/arrow-black-nomal.319be15.png";
 import verifiedIcon from "@/public/images/icons8-verified-16.png";
+import SliderButton from "@/components/SliderButton";
 
 const Carousel = () => {
   const [carouselItem, setcarouselItem] = useState(1);
@@ -41,14 +41,13 @@ const Carousel = () => {
 
   return (
     <div className="group/parent max-w-[55%] relative basis-1/2">
-      <button
+      <SliderButton
+        addClassName="!-left-5"
+        onClick={leftClickHandler}
         onMouseEnter={() => setCardHovered(true)}
         onMouseLeave={() => setCardHovered(false)}
-        className="invisible opacity-0 group-hover/parent:visible group-hover/parent:opacity-100 [transition:visibility_400ms,opacity_400ms] absolute z-[4] -left-5 top-0 bottom-0 my-auto w-[3.5rem] h-[3.5rem]"
-        onClick={leftClickHandler}
-      >
-        <Image className="" src={arrow} alt="<-" />
-      </button>
+      />
+
       <div className="w-[100%] h-[100%] overflow-x-hidden flex">
         {
           <CarouselCards
@@ -59,15 +58,15 @@ const Carousel = () => {
           />
         }
       </div>
-      <button
+
+      <SliderButton
+        right
+        buttonRef={buttonRef}
+        addClassName="!-right-5"
+        onClick={rightClickHandler}
         onMouseEnter={() => setCardHovered(true)}
         onMouseLeave={() => setCardHovered(false)}
-        ref={buttonRef}
-        onClick={rightClickHandler}
-        className="absolute invisible opacity-0 group-hover/parent:visible group-hover/parent:opacity-100 [transition:visibility_400ms,opacity_400ms] z-[4] -right-5  bottom-0 top-0 my-auto w-[3.5rem] h-[3.5rem]"
-      >
-        <Image className="rotate-180" src={arrow} alt="->" />
-      </button>
+      />
     </div>
   );
 };
