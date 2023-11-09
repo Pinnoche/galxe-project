@@ -1,7 +1,7 @@
 "use client";
 
 import { v4 as uuidv4 } from "uuid";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import SliderButton from "@/components/SliderButton";
 
@@ -20,7 +20,7 @@ const Slider = ({
     setSlideState((prev) => {
       return parseFloat((prev + 100 + 1.333).toFixed(3));
     });
-    setAppendItems((prev) => prev.slice(childrenNumber, prev.length));
+    setAppendItems((prev) => prev.slice(childrenNumber - 2, prev.length));
   };
 
   const rightClickedHandler = () => {
@@ -59,7 +59,7 @@ const Slider = ({
           transition={{ duration: 0.5, ease: "linear" }}
         >
           {children}
-          {appendItems}
+          {slideState <= 0 && appendItems}
         </motion.div>
       </div>
 

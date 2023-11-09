@@ -1,5 +1,5 @@
 import Slider from "@/components/Slider";
-import SliderCard from "@/components/SliderCard";
+import SliderCard from "./SliderCard";
 import data from "./slider.json";
 
 const Section5 = () => {
