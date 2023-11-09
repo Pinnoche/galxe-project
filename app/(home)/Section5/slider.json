@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "image": "/images/section51.webp",
+    "module": "5",
+    "name": "Bridges",
+    "participants": 42345,
+    "subtext": "Explore the concept of web3 bridges!",
+    "details-category": ["Co-host", "Points", "NFT"],
+    "cohost-icons": ["/images/section5icon1.webp", "/images/section5icon2.webp"]
+  },
+  {
+    "id": "2",
+    "image": "/images/section52.webp",
+    "module": "4",
+    "name": "DEX",
+    "participants": 238672,
+    "subtext": "Dive Into Web3 Learning!",
+    "details-category": ["Co-host", "Points", "NFT"],
+    "cohost-icons": ["/images/section5icon3.webp", "/images/section5icon4.webp"]
+  },
+  {
+    "id": "3",
+    "image": "/images/section53.webp",
+    "module": "3",
+    "name": "Networks and Tokens",
+    "participants": 262388,
+    "subtext": "Learn More Now!",
+    "details-category": ["Co-host", "Parent"],
+    "cohost-icons": ["/images/section5icon5.webp", "/images/section5icon6.jpeg"]
+  },
+  {
+    "id": "4",
+    "image": "/images/section54.webp",
+    "module": "2",
+    "name": "Fund Your Wallet",
+    "participants": 278124,
+    "subtext": "Elevate Your Knowledge!",
+    "details-category": ["Co-host", "Points", "NFT"],
+    "cohost-icons": ["/images/section5icon6.jpeg", "/images/section5icon2.webp"]
+  },
+  {
+    "id": "5",
+    "image": "/images/section55.webp",
+    "module": "1",
+    "name": "Welcome to Web3",
+    "participants": 367260,
+    "subtext": "Start Your Journey Here!",
+    "details-category": ["Co-host", "Points", "NFT"],
+    "cohost-icons": ["/images/section5icon6.jpeg", "/images/section5icon2.webp"]
+  }
+]
