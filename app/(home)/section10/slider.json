@@ -1,0 +1,55 @@
+[
+  {
+    "id": "1",
+    "name": "Tomo",
+    "verified": true,
+    "image": "/images/section101.webp",
+    "active_campaigns": 0,
+    "date": { "day": 2, "month": 11, "year": 2023 },
+    "categories": ["Social", "Wallet", "Layer 2"],
+    "backers_icons": []
+  },
+  {
+    "id": "2",
+    "name": "REPUBLIK",
+    "verified": true,
+    "image": "/images/section102.webp",
+    "active_campaigns": 2,
+    "date": { "day": 2, "month": 8, "year": 2023 },
+    "categories": ["Web3", "Social", "Play-To-Earn"],
+    "backers_icons": [
+      "/images/0x396e02b5e4c336bc166177f97da781dfabe0be27-1661292911730177308.jpeg",
+      "/images/section5icon2.webp",
+      "/images/section5icon1.webp",
+      "/images/2a5418f3-5122-4730-b242-f4aaf3b9d327.png",
+      "/images/6fd8c84f-bb97-41bf-84f0-24c747cf17f0.png"
+    ]
+  },
+  {
+    "id": "3",
+    "name": "FailSafe | Wallet Firewall",
+    "verified": true,
+    "image": "/images/section103.webp",
+    "active_campaigns": 1,
+    "date": { "day": 4, "month": 11, "year": 2023 },
+    "categories": ["Web3", "Infrastructure", "Wallet", "Privacy", "Layer 1"],
+    "backers_icons": [
+      "/images/section5icon1.webp",
+      "/images/2a5418f3-5122-4730-b242-f4aaf3b9d327.png",
+      "/images/6fd8c84f-bb97-41bf-84f0-24c747cf17f0.png"
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Base",
+    "verified": true,
+    "image": "/images/section104.png",
+    "active_campaigns": 1,
+    "date": { "day": 2, "month": 8, "year": 2023 },
+    "categories": ["Bridge", "NFT", "Web3", "Infrastructure", "Layer 2"],
+    "backers_icons": [
+      "/images/2a5418f3-5122-4730-b242-f4aaf3b9d327.png",
+      "/images/6fd8c84f-bb97-41bf-84f0-24c747cf17f0.png"
+    ]
+  }
+]
