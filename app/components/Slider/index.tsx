@@ -6,9 +6,11 @@ import { motion } from "framer-motion";
 import SliderButton from "@/components/SliderButton";
 
 const Slider = ({
+  className,
   childrenNumber,
   children,
 }: {
+  className?: string;
   childrenNumber: number;
   children: React.ReactNode;
 }) => {
@@ -20,7 +22,7 @@ const Slider = ({
     setSlideState((prev) => {
       return parseFloat((prev + 100 + 1.333).toFixed(3));
     });
-    setAppendItems((prev) => prev.slice(childrenNumber - 2, prev.length));
+    setAppendItems((prev) => prev.slice(childrenNumber, prev.length));
   };
 
   const rightClickedHandler = () => {
@@ -52,7 +54,7 @@ const Slider = ({
       <div className="overflow-x-clip">
         <motion.div
           ref={cardRef}
-          className="flex gap-[1.33%] snap-mandatory"
+          className={"flex gap-[1.333%] snap-mandatory " + className}
           animate={{
             x: `${slideState}%`,
           }}
