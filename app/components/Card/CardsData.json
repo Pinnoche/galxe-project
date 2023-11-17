@@ -1,0 +1,40 @@
+[
+    {
+        "id": 0,
+        "quote" : "Unlock the power of the Zero Trust Bride to accumulate points and earn exciting incentives!",
+        "point" : "70 Points",
+        "doc":false,
+        "card_title" : "Zero Trust Bridge | RegisterEase",
+        "card_icon": "https://cdn.galxe.com/galaxy/avatar/7cedce43-818b-4cbc-9d84-ce5080f758d0.png?optimizer=image&width=200&quality=100",
+        "card_name":"Mind Network",
+        "verified": true,
+        "card_img": ""
+    },
+    {
+        "id" : 1,
+        "quote" : "Join the Fun at Tomo Camival: Your Ticket to Exciting Events and Generous Tomo Points!",
+        "point" : "Points",
+        "nft" : "",
+        "role": "",
+        "doc":true,
+        "card_title" : "Tomo Carnival",
+        "card_icon": "https://cdn.galxe.com/galaxy/avatar/564979c8-5883-4f6c-a002-a1050ed48358.png?optimizer=image&width=200&quality=100",
+        "card_name":"Tomo",
+        "verified": true,
+        "card_img": "https://cdn.galxe.com/galaxy/tomo/13d50ab3-6f54-4989-af84-a59877300072.png?optimizer=image&width=200&quality=100"
+    },
+
+    {
+        "id" : 2,
+        "quote" : "Join Lightlink's Mainnet Mission Launch & claim a share of the 2.5% total supply airdrops!",
+        "point" : "Points",
+        "nft" : "NFT",
+        "role": "Discord Role",
+        "doc":true,
+        "card_title" : "Community Airdrop Phase 1: Discover LightLink",
+        "card_icon": "https://cdn.galxe.com/galaxy/avatar/6fd8c84f-bb97-41bf-84f0-24c747cf17f0.png?optimizer=image&width=200&quality=100",
+        "card_name":"Tomo",
+        "verified": true,
+        "card_img": "https://cdn.galxe.com/galaxy/lightlink/47695f12-3b46-47b7-8662-8c64a9bd67a9.png?optimizer=image&width=200&quality=100"
+    }
+]
