@@ -13,6 +13,7 @@ const Page = () => {
       <Section10 />
     </>
   );
+
 };
 
 export default Page;
