@@ -1,17 +1,21 @@
-import data from "./Section2data.json";
+import CardHolder from "@/components/CardHolder";
+import datas from "./Section2data.json";
+import Slider from "@/components/Slider";
 
-import CardHolder from "./CardHolder";
 interface dataProps {
-  data: Card[];
+  data: any;
 }
 export default function Section2() {
+  const cardGenerator = () => <CardHolder datas={datas} />;
   return (
-    <section className="bg-[#121212] text-white overflow-hidden">
-      <div className="relative mx-16 w-full">
-        <h1 className="aboslute flex items-center justify-between font-extrabold text-2xl my-6 ml-4">
+    <section className="bg-[#121212] text-white overflow-x-hidden">
+      <div className="mx-16">
+        <h1 className="aboslute flex items-center justify-between font-extrabold text-4xl my-6">
           For You
         </h1>
-        <CardHolder data={data} />
+        <Slider className="!gap-[1.8%]" childrenNumber={datas.length}>
+          {cardGenerator()}
+        </Slider>
       </div>
     </section>
   );
