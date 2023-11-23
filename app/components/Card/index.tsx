@@ -1,5 +1,5 @@
 import Image from "next/image";
-import datas from "@/(home)/Section2/Section2data.json";
+
 import cancel from "@/public/images/cancel.png";
 import behind from "@/public/images/foryou-card-bg-pc.70fc951.png";
 
@@ -9,7 +9,7 @@ interface CardList {
   poster: string;
 }
 
-interface StaticImages {
+interface StaticImagesType {
   behind: string;
   cancel: string;
 }
@@ -52,15 +52,4 @@ const Card = ({ tag, description, poster }: CardList) => {
   );
 };
 
-const CardHolder = () => {
-  return datas.map((data: CardList, id: number) => (
-    <Card
-      key={id}
-      tag={data.tag}
-      description={data.description}
-      poster={data.poster}
-    />
-  ));
-};
-
-export default CardHolder;
+export default Card;

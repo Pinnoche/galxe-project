@@ -1,9 +1,23 @@
-import CardHolder from "@/components/CardHolder";
+import Card from "@/components/Card";
 import datas from "./Section2data.json";
 import Slider from "@/components/Slider";
 
+interface CardList {
+  tag: string;
+  description: string;
+  poster: string;
+}
+
 export default function Section2() {
-  const cardGenerator = () => <CardHolder />;
+  const cardGenerator = () =>
+    datas.map((data: CardList, id: number) => (
+      <Card
+        key={id}
+        tag={data.tag}
+        description={data.description}
+        poster={data.poster}
+      />
+    ));
   return (
     <section className="bg-[#121212] text-white overflow-x-hidden">
       <div className="mx-16">
