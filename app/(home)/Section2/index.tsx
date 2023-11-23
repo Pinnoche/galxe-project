@@ -2,11 +2,8 @@ import CardHolder from "@/components/CardHolder";
 import datas from "./Section2data.json";
 import Slider from "@/components/Slider";
 
-interface dataProps {
-  data: any;
-}
 export default function Section2() {
-  const cardGenerator = () => <CardHolder datas={datas} />;
+  const cardGenerator = () => <CardHolder />;
   return (
     <section className="bg-[#121212] text-white overflow-x-hidden">
       <div className="mx-16">

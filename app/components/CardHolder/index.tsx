@@ -1,15 +1,15 @@
 import Image from "next/image";
+import datas from "@/(home)/Section2/Section2data.json";
 import cancel from "@/public/images/cancel.png";
 import behind from "@/public/images/foryou-card-bg-pc.70fc951.png";
 
 interface CardList {
-  key: number;
   tag: string;
   description: string;
   poster: string;
 }
 
-interface Others {
+interface StaticImages {
   behind: string;
   cancel: string;
 }
@@ -17,7 +17,7 @@ interface Others {
 const Card = ({ tag, description, poster }: CardList) => {
   return (
     <div className="relative cursor-pointer min-w-[32%] min-h-[16.25rem] p-5 bg-[#1b1e24] rounded-xl mt-4 mb-10 hover:shadow-gray-700 shadow-lg move-up">
-      <div className="absolute rounded-2xl bg-inherit border-2 border-white border-opacity-40 flex items-center justify-center w-[50px] font-bold cursor-pointer top-5 left-5 ">
+      <div className="absolute rounded-2xl bg-inherit border-2 border-white border-opacity-40 flex items-center justify-center w-[3.125rem] font-bold cursor-pointer top-5 left-5 ">
         {tag}
       </div>
 
@@ -52,11 +52,7 @@ const Card = ({ tag, description, poster }: CardList) => {
   );
 };
 
-interface DataProps {
-  datas: any;
-}
-
-const CardHolder = ({ datas }: DataProps) => {
+const CardHolder = () => {
   return datas.map((data: CardList, id: number) => (
     <Card
       key={id}

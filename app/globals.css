@@ -7,5 +7,5 @@
 }
 
 .move-up {
-  @apply transition ease-out duration-700 transform hover:translate-y-[-10px];
+  @apply transition ease-out duration-700 transform hover:translate-y-[-0.625rem];
 }
