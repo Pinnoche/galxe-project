@@ -3,6 +3,8 @@
         "id": 0,
         "quote" : "Unlock the power of the Zero Trust Bride to accumulate points and earn exciting incentives!",
         "point" : "70 Points",
+        "nft" : "",
+        "role": "",
         "doc":false,
         "card_title" : "Zero Trust Bridge | RegisterEase",
         "card_icon": "https://cdn.galxe.com/galaxy/avatar/7cedce43-818b-4cbc-9d84-ce5080f758d0.png?optimizer=image&width=200&quality=100",

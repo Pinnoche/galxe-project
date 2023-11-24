@@ -13,16 +13,15 @@ const config: Config = {
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "sect3": "url('https://b.galxestatic.com/w/s/5f88ccb/img/recommendbg.1db2505.png')"
+        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "sect3": "url('https://b.galxestatic.com/w/s/5f88ccb/img/recommendbg.1db2505.png')",
       },
       backgroundColor: {
         'my-color': '#060708'
         
       },
       backgroundPosition: {
-        fifty: '50%',
+        "fifty": '50%',
       },
       backgroundSize: {
         'hundred': '100% 100%',
