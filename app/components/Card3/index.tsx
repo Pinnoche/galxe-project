@@ -2,13 +2,10 @@ import React from 'react';
 import Image from 'next/image';
 import localFont from 'next/font/local'
 import { Inter } from "next/font/google";
-import datas from '@/components/Card3/CardsData.json'
-
 import icon1 from "@/public/images/download (5).png"
 import icon2 from "@/public/images/download (4).png"
 import icon3 from "@/public/images/download (3).png"
 import icon5 from "@/public/images/icons8-verified-48.png"
-import Slider from '@/app/components/Slider';
 
 const myFont = localFont({ src: '../../../public/fonts/Mona_Sans/WOFF/Mona-Sans-SemiBoldWide.woff' })
 const inter = Inter({ subsets: ["latin"] });
@@ -55,25 +52,4 @@ function Card({ quote, point, nft, role, doc, title, icon, name, verify, image }
     );
 }
 
-const CardSlider = () => {
-    interface card_data{
-        id: number;   
-    quote: string;
-    point: string;
-    nft: string;
-    role: string;
-    doc: boolean;
-    card_title: string;
-    card_icon: string;
-    card_name: string;
-    verified: boolean;
-    card_img: string;
-} 
-    return <Slider childrenNumber={datas.length} className=''>
-        {datas.map((data: card_data ) => (
-            <Card key={data.id} quote={data.quote} point={data.point} nft={data.nft} role={data.role} doc={data.doc} title={data.card_title}
-                icon={data.card_icon} name={data.card_name} verify={ data.verified} image={data.card_img } />
-        )) }
-        </Slider>
-}
-export default CardSlider;
+export default Card;

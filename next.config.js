@@ -1,16 +1,5 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-    images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'cdn.galxe.com',
-        port: '',
-        pathname: 'galaxy/avatar/',
-      },
-    ],
-  }, 
-}
+const nextConfig = {}
 
 module.exports = {
     images: {
