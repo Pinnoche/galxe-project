@@ -35,14 +35,16 @@ function Card({ quote, point, nft, role, doc, title, icon, name, verify, image }
                 <Image src={icon2} alt='quote 2' width={16} className='h-3 absolute bottom-3 right-3'/>
             </div>
             <div className={`px-3 flex justify-between text-xs ${inter.className} font-bold leading-5`}>
-                <p className='py-1 px-3.5 w-fit border rounded-2xl border-[hsla(0,0%,100%,.4)]'>{point}</p>
-                { nft  && <p className='py-1 px-3.5 w-fit border rounded-2xl border-[hsla(0,0%,100%,.4)]'>{nft}</p>}
-                {role && <p className='py-1 px-3.5 w-fit border rounded-2xl border-[hsla(0,0%,100%,.4)]'>{role}</p>}
+                <div className='flex justify-between w-[70%]'>
+                    <p className='py-1 px-3.5 w-fit border rounded-2xl border-[hsla(0,0%,100%,.4)]'>{point}</p>
+                    { nft  && <p className='py-1 px-3.5 w-fit border rounded-2xl border-[hsla(0,0%,100%,.4)]'>{nft}</p>}
+                    {role && <p className='py-1 px-3.5 w-fit border rounded-2xl border-[hsla(0,0%,100%,.4)]'>{role}</p>}
+                </div>
                 {doc && <Image src={icon3} width={20} className='h-5' alt='document'/>}
             </div>
-            <div className='flex mb-20 px-3.5 relative'>
-                <p className={`mt-6  w-[77%] ${inter.className} font-bold text-base leading-6`}>{title}</p>
-                {image ? <Image src={image} width={112} height={132} alt='' className='h-[8.25rem] absolute rounded-lg right-2 top-3'/> : <></>}
+            <div className='flex xl:mb-20 px-3.5 relative'>
+                <p className={`mt-6  w-[70%] ${inter.className} font-bold text-base leading-6 ${!image && 'w-full'}`}>{title}</p>
+                {image ? <Image src={image} width={112} height={132} alt='' className='h-[8.25rem] absolute rounded-lg right-2 top-5'/> : <></>}
             </div>
             <div className='flex px-3 absolute bottom-5 left-3'>
                 {icon && <Image src={icon} height={24} width={24} alt='' className='rounded-full mr-2' />}
@@ -67,7 +69,7 @@ const CardSlider = () => {
     verified: boolean;
     card_img: string;
 } 
-    return <Slider childrenNumber={datas.length} className='justify-between'>
+    return <Slider childrenNumber={datas.length} className=''>
         {datas.map((data: card_data ) => (
             <Card key={data.id} quote={data.quote} point={data.point} nft={data.nft} role={data.role} doc={data.doc} title={data.card_title}
                 icon={data.card_icon} name={data.card_name} verify={ data.verified} image={data.card_img } />
