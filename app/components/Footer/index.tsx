@@ -1,11 +1,18 @@
 import data from "@/components/Footer/footer.json";
+import Image from "next/image";
 
 function Footer() {
   return (
     <footer className="bg-my-color px-7 lg:px-12 xl:px-20">
       <div className="py-12 flex flex-wrap justify-between md:py-16 xl:py-20">
         <div className="mb-12 w-full xl:w-fit">
-          <img className="h-5" src={data.logo} alt="Galxe Logo" />
+          <Image
+            className="h-5"
+            src={data.logo}
+            alt="Galxe Logo"
+            width={100}
+            height={100}
+          />
           <p className="mt-5 max-w-lg leading-6 text-left text-sm font-normal text-footer-color">
             {data.content}
           </p>

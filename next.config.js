@@ -32,6 +32,18 @@ module.exports = {
     hostname: 'cdn.galxe.com',
     port: '',
     pathname: '/galaxy/lightlink/**',
+        },
+    {
+    protocol: 'https',
+    hostname: 'cdn.galxe.com',
+    port: '',
+    pathname: '/galaxy/stargatefinance/**',
+        },
+    {
+    protocol: 'https',
+    hostname: 'cdn.galxe.com',
+    port: '',
+    pathname: '/galaxy/rehold/**',
     },
     ],     
   }, 
