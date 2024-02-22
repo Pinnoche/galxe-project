@@ -1,4 +1,4 @@
-import Card from "@/components/Card";
+import Card from "./sliderCard";
 import datas from "./Section2data.json";
 import Slider from "@/components/Slider";
 
