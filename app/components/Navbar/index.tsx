@@ -3,7 +3,9 @@
 import Image from "next/image";
 import galxe from "@/public/images/galxe.png";
 import Link from "next/link";
+import cancel from "@/public/images/cancel.png";
 import { AiFillCaretDown } from "react-icons/ai";
+import { IoIosMenu } from "react-icons/io";
 
 import { useState } from "react";
 
@@ -12,14 +14,19 @@ export default function Navbar() {
   const [galxeList, setGalxeList] = useState(false);
   const [protocolList, setProtocolList] = useState(false);
   const [moreList, setMoreList] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <div className="fixed bg-black top-0 left-0 w-full h-20 z-[7]">
+    <div
+      className={`fixed bg-black top-0 left-0 w-full h-20 z-[7] ${
+        showMenu == true ? "tablet:min-h-full" : "h-20"
+      }`}
+    >
       <nav className="relative w-full h-full">
         <div className="absolute h-full w-full flex items-center justify-between">
           <div className="flex items-center">
             <div className="ml-4 mr-4">
-              <Link href="/" className="mx-8 flex justify-center">
+              <Link href="/" className="mx-8 flex">
                 <Image
                   src={galxe}
                   alt="Galxe"
@@ -30,7 +37,11 @@ export default function Navbar() {
                 />
               </Link>
             </div>
-            <div className="text-white flex items-center">
+            <div
+              className={`text-white flex items-center tablet:flex-wrap tablet:min-h-full tablet:min-w-full ${
+                showMenu == true ? "block" : "tablet:hidden"
+              }`}
+            >
               <div
                 className="relative mr-2"
                 onMouseEnter={() => setExploreList(true)}
@@ -95,7 +106,7 @@ export default function Navbar() {
                 <span className="flex items-center cursor-pointer hover:text-blue-700">
                   Protocol <AiFillCaretDown className="h-4 w-7" />
                 </span>
-                <div className="absolute top-[100%] pt-[30%] min-w-[172px] left-0">
+                <div className="absolute top-[100%] pt-[30%] min-w-[10.75rem] left-0">
                   <ul
                     className={`w-full bg-black border-gray-900 border-2 rounded-md overflow-hidden cursor-pointer ${
                       protocolList == false ? "hidden" : "block"
@@ -174,13 +185,34 @@ export default function Navbar() {
             </div>
           </div>
           <div className="flex items-center justify-center">
-            <button className="bg-gray-700 text-gray-400 rounded-full text-xs mr-4 py-[7px] px-5 hover:bg-gray-500">
-              Network
+            <button className="bg-gray-700 text-gray-400 rounded-full text-xs mr-4 py-[7px] px-5 hover:bg-gray-500 phone:hidden">
+              Polygon
             </button>
-            <button className="bg-blue-700 rounded-full py-[7px] px-6 text-xs text-white font-bold mx-4 hover:bg-blue-500">
+            <button
+              className={`bg-blue-700 rounded-full py-[7px] px-6 text-xs text-white font-bold mx-4 hover:bg-blue-500 ${
+                showMenu == true ? "block" : "tablet:hidden"
+              }`}
+            >
               Log in
             </button>
           </div>
+
+          <button
+            onClick={() => setShowMenu(true)}
+            className={`cursor-pointer hidden tablet:block ${
+              showMenu == true ? "tablet:hidden" : "block"
+            }`}
+          >
+            <IoIosMenu className="h-10 w-10 text-white" />
+          </button>
+          <button
+            onClick={() => setShowMenu(false)}
+            className={`bg-cover text-white mr-3 z-10 cursor-pointer hidden tablet:block ${
+              showMenu == false ? "tablet:hidden" : "block"
+            }`}
+          >
+            <Image src={cancel} alt="Cancel" width={20} height={20} />
+          </button>
         </div>
       </nav>
     </div>
