@@ -8,14 +8,14 @@ const config: Config = {
   ],
   theme: {
     screens: {
-      laptop: { max: "1023px" },
-      // => @media (max-width: 1023px) { ... }
+      laptop: { max: "1370px" },
+      // => @media (max-width: 1280px) { ... }
 
-      tablet: { max: "767px" },
-      // => @media (max-width: 767px) { ... }
+      tablet: { max: "1024px" },
+      // => @media (max-width: 600px) { ... }
 
-      phone: { max: "639px" },
-      // => @media (max-width: 639px) { ... }
+      phone: { max: "500px" },
+      // => @media (max-width: 415px) { ... }
 
       sm: "640px",
       // => @media (min-width: 640px) { ... }

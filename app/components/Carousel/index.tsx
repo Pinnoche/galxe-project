@@ -40,15 +40,15 @@ const Carousel = () => {
   }, [cardHovered]);
 
   return (
-    <div className="group/parent max-w-[55%] relative basis-1/2">
+    <div className="group/parent max-w-[55%] relative basis-1/2 tablet:max-w-full tablet:w-[80%]">
       <SliderButton
-        addClassName="!-left-5"
+        addClassName="!-left-5 laptop:!left-[1%]"
         onClick={leftClickHandler}
         onMouseEnter={() => setCardHovered(true)}
         onMouseLeave={() => setCardHovered(false)}
       />
 
-      <div className="w-[100%] h-[100%] overflow-x-hidden flex">
+      <div className="w-[100%] h-[100%] overflow-x-hidden flex tablet:justify-center">
         {
           <CarouselCards
             carouselItem={carouselItem}
@@ -62,7 +62,7 @@ const Carousel = () => {
       <SliderButton
         right
         buttonRef={buttonRef}
-        addClassName="!-right-5"
+        addClassName="!-right-5 laptop:!right-[1%]" //
         onClick={rightClickHandler}
         onMouseEnter={() => setCardHovered(true)}
         onMouseLeave={() => setCardHovered(false)}
@@ -102,13 +102,14 @@ const CarouselCards = ({
             onMouseLeave={() => setCardHovered(false)}
             className={`group self-end relative object-cover flex flex-col px-[0.75rem] pt-[0.75rem] text-white capitalize border-[#262632] border rounded-[0.75rem] shrink-0 grow-0 h-[100%]  ${
               item.id === carouselItem
-                ? `w-[32.625rem] h-[24.25rem] -translate-x-[66%] z-[3] -order-[9998]`
-                : `w-[28.625rem] h-[22rem] transition-all duration-[5] ease-in`
+                ? `w-[32.625rem] h-[24.25rem] -translate-x-[66%] z-[3] -order-[9998] laptop:translate-x-[0%] laptop:mx-auto laptop:my-0`
+                : `w-[28.625rem] h-[22rem] transition-all duration-[5] ease-in laptop:absolute laptop:z-[2] laptop:inset-0 laptop:hidden`
             } ${
               item.id === decrement()
                 ? "order-first"
-                : item.id === increment() && `-order-[9997] -translate-x-[150%]`
-            }`}
+                : item.id === increment() &&
+                  `-order-[9997] -translate-x-[150%] laptop:translate-x-[150%]` //
+            } laptop:w-[28.625rem] laptop:h-[100%] tablet:w-[100%] tablet:h-[18rem]`}
             key={item.id}
           >
             <div className="absolute inset-0 z-[1] backdrop-blur-[1.25rem] rounded-[0.75rem]"></div>
