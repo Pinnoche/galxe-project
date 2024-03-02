@@ -8,10 +8,12 @@ import SliderButton from "@/components/SliderButton";
 const Slider = ({
   className,
   childrenNumber,
+  offset,
   children,
 }: {
   className?: string;
   childrenNumber: number;
+  offset?: number;
   children: React.ReactNode;
 }) => {
   const [slideState, setSlideState] = useState(0);
@@ -20,14 +22,14 @@ const Slider = ({
 
   const leftClickedHandler = () => {
     setSlideState((prev) => {
-      return parseFloat((prev + 100 + 1.333).toFixed(3));
+      return parseFloat((prev + 100 + (offset ? offset : 0)).toFixed(3));
     });
     setAppendItems((prev) => prev.slice(childrenNumber, prev.length));
   };
 
   const rightClickedHandler = () => {
     setSlideState((prev) => {
-      return parseFloat((prev - 100 - 1.333).toFixed(3));
+      return parseFloat((prev - 100 - (offset ? offset : 0)).toFixed(3));
     });
     append();
   };
@@ -54,7 +56,7 @@ const Slider = ({
       <div className="overflow-x-clip">
         <motion.div
           ref={cardRef}
-          className={"flex gap-[1.333%] snap-mandatory " + className}
+          className={`flex ${className} gap-[1.333%] snap-mandatory`}
           animate={{
             x: `${slideState}%`,
           }}

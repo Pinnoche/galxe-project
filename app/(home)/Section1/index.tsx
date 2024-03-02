@@ -32,16 +32,16 @@ const Section1 = () => {
   }, []);
 
   return (
-    <section className="flex gap-[7%] bg-[#121212] relative px-[4.5rem] pt-[9.375rem] pb-[5.9375rem] [&>div]:z-[3] overflow-x-hidden">
+    <section className="flex gap-[7%] bg-[#121212] relative px-[4.5rem] pt-[9.375rem] pb-[5.9375rem] [&>div]:z-[3] overflow-x-hidden tablet:flex-col tablet:gap-7 tablet:items-center tablet:px-0 tablet:pb-12">
       <Image
         src={backgroundImage}
         className="absolute bg-[50%] bg-cover inset-0 h-[100%] w-[100%]"
         alt="background image"
         priority
       />
-      <div className="flex flex-col gap-10 basis-1/2">
-        <div className="text-white text-[2.75rem] leading-[4rem] font-[800]">
-          <div className="flex gap-4">
+      <div className="flex flex-col gap-10 basis-1/2 laptop:gap-9 tablet:w-[80%]">
+        <div className="text-white text-[2.75rem] leading-[4rem] font-[800] laptop:text-[2.55rem] laptop:leading-[3.25rem] tablet:text-center">
+          <div className="flex gap-4 tablet:justify-center">
             Earn
             <div className="relative overflow-hidden text-[#0578ff] h-[3.25rem]">
               <motion.div
@@ -67,23 +67,26 @@ const Section1 = () => {
           <p>by Contributing to Your</p>
           <p>Favorite Web3 Community</p>
         </div>
-        <div className="flex gap-6">
-          <Image src={icon1} height={32} width={32} alt="icon" />
-          <Image src={icon2} height={32} width={32} alt="icon" />
-          <Image src={icon3} height={32} width={32} alt="icon" />
-          <Image src={icon4} height={32} width={32} alt="icon" />
-          <Image src={icon5} height={32} width={32} alt="icon" />
-          <Image src={icon6} height={32} width={32} alt="icon" />
-          <Image src={icon7} height={32} width={32} alt="icon" />
-          <Image src={icon8} height={32} width={32} alt="icon" />
-          <Image src={icon9} height={32} width={32} alt="icon" />
+        <div className="flex gap-6 tablet:justify-center phone:flex-wrap">
+          {[icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9].map(
+            (value, index) => (
+              <Image
+                key={index}
+                className="w-[2rem] h-[2rem] laptop:w-[1.5rem] laptop:h-[1.5rem]"
+                src={value}
+                height={32}
+                width={32}
+                alt="icon"
+              />
+            )
+          )}
         </div>
-        <div className="flex gap-7">
-          <motion.button className="bg-white hover:opacity-[0.6] transition-opacity ease  duration-300 flex gap-3 h-[3.25rem] w-[16.5625rem] text-black rounded-[0.5rem] justify-center items-center font-[800] text-[1.125rem]">
+        <div className="flex gap-7 text-[1.125rem] laptop:text-[0.875rem] phone:flex-col phone:items-center">
+          <motion.button className="bg-white hover:opacity-[0.6] transition-opacity ease  duration-300 flex gap-3  h-[3.25rem] w-[16.5625rem] text-black rounded-[0.5rem] justify-center items-center font-[800] laptop:h-[3rem] tablet:w-[47%] phone:w-[80%]">
             <span>3k+ Trusted Brands</span>
             <Image src={icon10} alt="icon" width={20} height={20} />
           </motion.button>
-          <motion.button className="h-[3.25rem] w-[16.5625rem] bg-[#121212`] hover:opacity-[0.6] transition-opacity duration-300 ease text-white rounded-[0.5rem] font-[800] text-[1.125rem] border-white border-2">
+          <motion.button className="h-[3.25rem] w-[16.5625rem] bg-[#121212`] hover:opacity-[0.6] transition-opacity duration-300 ease text-white rounded-[0.5rem] font-[800] border-white border-2 laptop:h-[3rem] tablet:ml-auto tablet:w-[47%] phone:w-[80%] phone:ml-0">
             Create Your Space
           </motion.button>
         </div>
