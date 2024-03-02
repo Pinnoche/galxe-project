@@ -11,10 +11,10 @@ const config: Config = {
       laptop: { max: "1280px" },
       // => @media (max-width: 1023px) { ... }
 
-      tablet: { max: "600px" },
+      tablet: { max: "1024px" },
       // => @media (max-width: 767px) { ... }
 
-      phone: { max: "415px" },
+      phone: { max: "430px" },
       // => @media (max-width: 639px) { ... }
 
       sm: "640px",
