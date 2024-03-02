@@ -16,7 +16,7 @@ interface StaticImagesType {
 
 const Card = ({ tag, description, poster }: CardList) => {
   return (
-    <div className="relative cursor-pointer min-w-[32%] min-h-[16.25rem] p-5 bg-[#1b1e24] rounded-xl mt-4 mb-10 hover:shadow-gray-700 shadow-lg move-up">
+    <div className="relative cursor-pointer min-w-[32%] min-h-[16.25rem] p-5 bg-[#1b1e24] rounded-xl mt-4 mb-10 hover:shadow-gray-700 shadow-lg move-up tablet:min-w-[100%]">
       <div className="absolute rounded-2xl bg-inherit border-2 border-white border-opacity-40 flex items-center justify-center w-[3.125rem] font-bold cursor-pointer top-5 left-5 ">
         {tag}
       </div>
