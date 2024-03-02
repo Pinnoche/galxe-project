@@ -19,12 +19,12 @@ export default function Section2() {
       />
     ));
   return (
-    <section className="bg-[#121212] text-white overflow-x-hidden">
-      <div className="mx-16">
+    <section className="bg-[#121212] px-[4.5rem] text-white overflow-x-hidden tablet:px-[5%]">
+      <div>
         <h1 className="aboslute flex items-center justify-between font-extrabold text-4xl my-6">
           For You
         </h1>
-        <Slider className="!gap-[1.8%]" childrenNumber={datas.length}>
+        <Slider className="!gap-[2%]" childrenNumber={datas.length} offset={2}>
           {cardGenerator()}
         </Slider>
       </div>
