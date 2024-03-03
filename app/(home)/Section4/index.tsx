@@ -20,11 +20,13 @@ const Section5 = () => {
     });
 
   return (
-    <section className="px-[4.5rem] pb-[4rem] bg-[#0f1114]">
-      <div className="font-[800] mb-[2.1875rem] text-white text-[2rem] leading-[2.875rem]">
+    <section className="px-[4.5rem] pb-[4rem] bg-[#0f1114] tablet:px-[5%]">
+      <div className="font-[800] mb-[2.1875rem] text-white text-[2rem] leading-[2.875rem] pt-7">
         Mission Web3
       </div>
-      <Slider childrenNumber={data.length}>{cardGenerator()}</Slider>
+      <Slider childrenNumber={data.length} offset={1.333}>
+        {cardGenerator()}
+      </Slider>
     </section>
   );
 };
