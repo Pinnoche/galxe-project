@@ -45,7 +45,7 @@ const SliderCard = ({
     <motion.div
       whileHover="hover"
       variants={parentHoverVariant}
-      className="relative group text-[0.75rem] leading-[1.25rem] flex items-center overflow-hidden rounded-[0.75rem] border border-[hsla(0,0%,100%,.08)] min-w-[24%] md:min-w-[32%] h-[11.975rem] text-white"
+      className="relative group text-[0.75rem] leading-[1.25rem] flex items-center overflow-hidden rounded-[0.75rem] border border-[hsla(0,0%,100%,.08)] min-w-[32%] h-[11.975rem] text-white tablet:min-w-[100%]"
     >
       {currentDate[1] === date.month && currentDate[2] === date.year ? (
         <div className="absolute z-[5] px-4 py-[0.1875rem] top-0 left-0 bg-[#00b88d] rounded-[0.625rem_0.25rem]">
