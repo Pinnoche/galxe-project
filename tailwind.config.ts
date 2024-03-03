@@ -10,12 +10,17 @@ const config: Config = {
     screens: {
       laptop: { max: "1370px" },
       // => @media (max-width: 1280px) { ... }
-
+      
       tablet: { max: "1024px" },
       // => @media (max-width: 600px) { ... }
 
       phone: { max: "500px" },
       // => @media (max-width: 415px) { ... }
+
+      small:{ max: "375px" },
+
+      less: { max: "320px" },
+      // => @media (max-width: 320px) { ... }
 
       sm: "640px",
       // => @media (min-width: 640px) { ... }
