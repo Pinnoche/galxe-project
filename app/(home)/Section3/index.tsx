@@ -26,7 +26,7 @@ interface card_data {
 
 function Section3() {
   return (
-    <div className="bg-sect3 bg-no-repeat bg-fifty bg-hundred pl-7 py-9 w-full xl:pb-16 xl:pt-16 xl:px-[4.5rem]">
+    <div className="bg-sect3 bg-no-repeat bg-fifty bg-hundred pl-7 py-9 w-full xl:pb-16 xl:pt-16 xl:px-[4.5rem] min-w-[320px">
       <div className={`flex mb-7 ${myFont.className} xl:mb-8`}>
         <Image
           src={select_icon}
@@ -38,7 +38,26 @@ function Section3() {
           Galxe Selects
         </p>
       </div>
-      <Slider childrenNumber={datas.length} className="">
+      <div className="hidden sm:block">
+        <Slider childrenNumber={datas.length} className="phone:overflow-x-scroll ">
+          {datas.map((data: card_data) => (
+            <Card
+              key={data.id}
+              quote={data.quote}
+              point={data.point}
+              nft={data.nft}
+              role={data.role}
+              doc={data.doc}
+              title={data.card_title}
+              icon={data.card_icon}
+              name={data.card_name}
+              verify={data.verified}
+              image={data.card_img}
+            />
+          ))}
+        </Slider>
+      </div>  
+      <div className="flex overflow-x-scroll no-scrollbar sm:hidden ">
         {datas.map((data: card_data) => (
           <Card
             key={data.id}
@@ -54,7 +73,7 @@ function Section3() {
             image={data.card_img}
           />
         ))}
-      </Slider>
+      </div>
     </div>
   );
 }
