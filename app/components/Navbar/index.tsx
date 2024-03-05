@@ -30,10 +30,10 @@ export default function Navbar() {
   return (
     <div
       className={`fixed top-0 bg-black w-full h-20 z-[7] ${
-        showMenu == true ? "tablet:h-full" : "h-20"
+        showMenu == true ? "tablet:min-h-full" : "h-20"
       }`}
     >
-      <nav className="w-full h-full tablet:overflow-auto -scroll-my-96">
+      <nav className="w-full h-full min-h-full tablet:overflow-auto">
         <div className="h-full w-full tablet:relative">
           <div className="w-full h-full flex tablet:flex-col">
             <div
@@ -75,10 +75,10 @@ export default function Navbar() {
             </div>
 
             <div
-              className={`w-full flex items-center justify-between text-white tablet:h-full tablet:grid tablet:grid-cols-1 tablet:items-end`}
+              className={`w-full flex items-center justify-between text-white tablet:h-auto tablet:grid tablet:grid-cols-1 tablet:gap-75 tablet:items-end`}
             >
               <div
-                className={`flex tablet:grid tablet:grid-cols-1 tablet:min-h-full tablet:min-w-full tablet:p-10 tablet:text-xl tablet:font-semibold  ${
+                className={`flex tablet:grid tablet:grid-cols-1 tablet:min-w-full tablet:p-10 tablet:text-xl tablet:font-semibold  ${
                   showMenu == true ? "tablet:block" : "tablet:hidden"
                 }`}
               >
@@ -270,7 +270,7 @@ export default function Navbar() {
                   )}
                 </div>
               </div>
-              <div className="flex mr-4 ml-28 tablet:ml-4">
+              <div className="flex mr-4 ml-28 tablet:ml-4 tablet:mt-auto">
                 <button className="bg-gray-700 text-gray-400 rounded-full text-xs py-[0.4374rem] px-6 mr-4 hover:bg-gray-500 tablet:hidden max-w-16 max-h-8">
                   Network
                 </button>
