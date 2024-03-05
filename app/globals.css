@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .list {
-  @apply text-blue-700 font-bold [&>li]:text-white [&>li]:font-normal [&>li]:text-sm [&>li]:mb-1 [&>li]:cursor-pointer mx-6 tracking-wide [&>li]:pt-1 hover:[&>li]:text-blue-700 tablet:mx-0;
+  @apply text-blue-700 font-bold [&>li]:text-white [&>li]:font-normal [&>li]:text-sm [&>li]:mb-1 [&>li]:cursor-pointer mx-6 tracking-wide [&>li]:pt-1 hover:[&>li]:text-blue-700 tablet:hover:[&>li]:text-white tablet:mx-0;
 }
 
 .move-up {
@@ -11,7 +11,6 @@
 }
 
 @layer utilities {
-
   /* Hide scrollbar for Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
     display: none;

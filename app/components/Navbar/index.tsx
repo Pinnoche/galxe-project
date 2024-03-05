@@ -33,7 +33,7 @@ export default function Navbar() {
         showMenu == true ? "tablet:min-h-full" : "h-20"
       }`}
     >
-      <nav className="w-full h-full min-h-full tablet:overflow-auto">
+      <nav className="w-full h-full min-h-full tablet:overflow-auto no-scrollbar">
         <div className="h-full w-full tablet:relative">
           <div className="w-full h-full flex tablet:flex-col">
             <div
@@ -47,7 +47,7 @@ export default function Navbar() {
                   width={100}
                   height={20}
                   priority
-                  className="cursor-pointer overflow-clip min-w-[30%]"
+                  className="cursor-pointer"
                 />
               </Link>
 
@@ -75,10 +75,10 @@ export default function Navbar() {
             </div>
 
             <div
-              className={`w-full flex items-center justify-between text-white tablet:h-auto tablet:grid tablet:grid-cols-1 tablet:gap-75 tablet:items-end`}
+              className={`w-full flex items-center justify-between text-white tablet:flex-shrink tablet:grid tablet:grid-cols-1`}
             >
               <div
-                className={`flex tablet:grid tablet:grid-cols-1 tablet:min-w-full tablet:p-10 tablet:text-xl tablet:font-semibold  ${
+                className={`flex tablet:grid tablet:grid-cols-1 tablet:gap-5 tablet:min-w-full tablet:p-10 tablet:text-xl tablet:font-semibold  ${
                   showMenu == true ? "tablet:block" : "tablet:hidden"
                 }`}
               >
@@ -270,12 +270,12 @@ export default function Navbar() {
                   )}
                 </div>
               </div>
-              <div className="flex mr-4 ml-28 tablet:ml-4 tablet:mt-auto">
+              <div className="flex mr-4 ml-28 tablet:ml-4 tablet:mt-40 tablet:mb-8">
                 <button className="bg-gray-700 text-gray-400 rounded-full text-xs py-[0.4374rem] px-6 mr-4 hover:bg-gray-500 tablet:hidden max-w-16 max-h-8">
                   Network
                 </button>
                 <button
-                  className={`bg-blue-700 rounded-full tablet:rounded-lg tablet:w-[100%] tablet:h-12 tablet:text-lg tablet:mb-8 py-[0.4374rem] px-6 text-xs text-white font-bold hover:bg-blue-500 max-h-8 ${
+                  className={`bg-blue-700 rounded-full tablet:rounded-lg tablet:min-w-full tablet:min-h-[52px] tablet:text-base tablet:font-bold tablet:mb-0 py-[0.4374rem] px-6 tablet:py-[14px] tablet:px-[40px] text-xs text-white font-bold hover:bg-blue-500 max-h-8 ${
                     showMenu == true ? "block" : "tablet:hidden"
                   }`}
                 >
