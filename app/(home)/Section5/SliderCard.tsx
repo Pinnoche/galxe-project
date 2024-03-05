@@ -48,7 +48,7 @@ const SliderCard = ({
     <motion.div
       whileHover="hover"
       variants={parentHoverVariant}
-      className="snap-start min-w-[24%] h-[33.75rem] p-[1.25rem] rounded-[0.75rem] text-white bg-[linear-gradient(180deg,#1b1e24,rgba(27,30,36,.65))]"
+      className="snap-start min-w-[24%] tablet:min-w-[50%] phone:min-w-full h-[33.75rem] p-[1.25rem] rounded-[0.75rem] text-white bg-[linear-gradient(180deg,#1b1e24,rgba(27,30,36,.65))]"
     >
       <div className="relative object-cover w-[100%] h-[68%] mb-[1.5rem]">
         <Image
