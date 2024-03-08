@@ -49,7 +49,13 @@ const Card = ({ tag, description, poster }: CardList) => {
         <Image src={cancel} alt="Cancel" width={20} height={20} />
       </div>
       <div className=" bg-center absolute bottom-0 right-0">
-        <Image src={behind} alt="Behind" width={250} height={100} />
+        <Image
+          className=""
+          src={behind}
+          alt="Behind"
+          width={250}
+          height={100}
+        />
       </div>
     </CardWrapper>
   );

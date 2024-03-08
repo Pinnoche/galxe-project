@@ -7,11 +7,11 @@ function Footer() {
       <div className="py-12 flex flex-wrap justify-between md:py-16 xl:py-20">
         <div className="mb-12 w-full xl:w-fit">
           <Image
-            className="h-5"
+            className="h-5 w-[100px]"
             src={data.logo}
             alt="Galxe Logo"
-            width={100}
-            height={100}
+            width={0}
+            height={0}
           />
           <p className="mt-5 max-w-lg leading-6 text-left text-sm font-normal text-footer-color">
             {data.content}

@@ -2,18 +2,11 @@
 
 import React from "react";
 import Image from "next/image";
-import localFont from "next/font/local";
-import { Inter } from "next/font/google";
 import icon1 from "@/public/images/download (5).png";
 import icon2 from "@/public/images/download (4).png";
 import icon3 from "@/public/images/download (3).png";
 import icon5 from "@/public/images/icons8-verified-48.png";
 import CardWrapper from "@/HOC/CardWrapper";
-
-const myFont = localFont({
-  src: "../../../public/fonts/Mona_Sans/WOFF/Mona-Sans-SemiBoldWide.woff",
-});
-const inter = Inter({ subsets: ["latin"] });
 
 interface cardprop {
   quote: string;
@@ -43,7 +36,7 @@ function Card({
   return (
     <CardWrapper className="pt-2  px-2 pb-5 bg-black bg-black/70 text-white relative rounded-xl  min-w-[32%] tablet:min-w-[95%] tablet:pb-12 phone:pb-5">
       <div
-        className={`flex p-3 mb-5 bg-[#0057ff] rounded-xl text-xs font-semibold relative leading-5  ${myFont.className}`}
+        className={`flex p-3 mb-5 bg-[#0057ff] rounded-xl text-xs font-semibold relative leading-5`}
       >
         <Image src={icon1} alt="quote 1" width={16} className="h-3 mr-1.5" />
         {quote.length > 70 ? (
@@ -106,9 +99,7 @@ function Card({
             className="rounded-full mr-2"
           />
         )}
-        <p
-          className={`${inter.className} font-normal text-xs pt-0.5 leading-5 text-[#ced3db]`}
-        >
+        <p className={`font-normal text-xs pt-0.5 leading-5 text-[#ced3db]`}>
           {name}
         </p>
         {{ verify } && (

@@ -125,6 +125,7 @@ const CarouselCards = ({
                 src={item["poster-picture"]}
                 alt="poster image"
                 fill
+                sizes=""
               />
             </div>
             <div className="h-[4.75rem] z-[2] px-[0.75rem] flex flex-col justify-center gap-2 pb-[1.25rem]">

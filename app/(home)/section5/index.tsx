@@ -16,8 +16,8 @@ const Section5 = () => {
 
     const recentData = data.filter((cardData) => {
       if (
-        cardData.date["month"] === currentDate[1] &&
-        cardData.date["year"] === currentDate[2]
+        cardData.date.month === currentDate[1] &&
+        cardData.date.year === currentDate[2]
       ) {
         return cardData;
       } else {

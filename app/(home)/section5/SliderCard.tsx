@@ -62,6 +62,7 @@ const SliderCard = ({
         alt="card image"
         width={1000}
         height={1000}
+        priority
       />
       <div className="absolute z-[3] p-[1.25rem] bg-transparent w-full h-full">
         <div className="flex gap-6 mb-[1.5rem]">
