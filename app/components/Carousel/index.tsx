@@ -40,7 +40,7 @@ const Carousel = () => {
   }, [cardHovered]);
 
   return (
-    <div className="group/parent max-w-[55%] relative basis-1/2 tablet:max-w-full tablet:w-[80%]">
+    <div className="group/parent max-w-[55%] relative basis-1/2 tablet:max-w-full tablet:w-[90%] phone:w-[90%]">
       <SliderButton
         addClassName="!-left-5 laptop:!left-[1%]"
         onClick={leftClickHandler}
@@ -109,7 +109,7 @@ const CarouselCards = ({
                 ? "order-first"
                 : item.id === increment() &&
                   `-order-[9997] -translate-x-[150%] laptop:translate-x-[150%]` //
-            } laptop:w-[28.625rem] laptop:h-[100%] tablet:w-[100%] tablet:h-[18rem]`}
+            } laptop:w-[28.625rem] laptop:h-[100%] tablet:w-[100%] tablet:h-[20rem] phone:h-[18rem]`}
             key={item.id}
           >
             <div className="absolute inset-0 z-[1] backdrop-blur-[1.25rem] rounded-[0.75rem]"></div>
@@ -125,6 +125,7 @@ const CarouselCards = ({
                 src={item["poster-picture"]}
                 alt="poster image"
                 fill
+                sizes=""
               />
             </div>
             <div className="h-[4.75rem] z-[2] px-[0.75rem] flex flex-col justify-center gap-2 pb-[1.25rem]">
