@@ -8,5 +8,5 @@ export default function LandingPageLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <main className="h-[100%]">{children}</main>;
+  return <main className={"h-[100%]"}>{children}</main>;
 }

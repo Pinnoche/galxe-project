@@ -39,11 +39,11 @@ const Section1 = () => {
         alt="background image"
         priority
       />
-      <div className="flex flex-col gap-10 basis-1/2 laptop:gap-9 tablet:w-[80%]">
-        <div className="text-white text-[2.75rem] leading-[4rem] font-[800] laptop:text-[2.55rem] laptop:leading-[3.25rem] tablet:text-center">
+      <div className="flex flex-col gap-10 basis-1/2 laptop:gap-9 tablet:w-[90%]">
+        <div className="text-white text-[2.75rem] leading-[4rem] font-[800] laptop:text-[2.55rem] laptop:leading-[3.25rem] tablet:text-center phone:text-[2rem] phone:leading-[2.7rem]">
           <div className="flex gap-4 tablet:justify-center">
             Earn
-            <div className="relative overflow-hidden text-[#0578ff] h-[3.25rem]">
+            <div className="relative overflow-hidden text-[#0578ff] h-[3.25rem] phone:h-[2.7rem]">
               <motion.div
                 ref={textAnimate}
                 className=""
@@ -82,11 +82,11 @@ const Section1 = () => {
           )}
         </div>
         <div className="flex gap-7 text-[1.125rem] laptop:text-[0.875rem] phone:flex-col phone:items-center">
-          <motion.button className="bg-white hover:opacity-[0.6] transition-opacity ease  duration-300 flex gap-3  h-[3.25rem] w-[16.5625rem] text-black rounded-[0.5rem] justify-center items-center font-[800] laptop:h-[3rem] tablet:w-[47%] phone:w-[80%]">
+          <motion.button className="bg-white hover:opacity-[0.6] transition-opacity ease  duration-300 flex gap-3  h-[3.25rem] w-[16.5625rem] text-black rounded-[0.5rem] justify-center items-center font-[800] laptop:h-[3rem] tablet:w-[47%] phone:w-[90%]">
             <span>3k+ Trusted Brands</span>
             <Image src={icon10} alt="icon" width={20} height={20} />
           </motion.button>
-          <motion.button className="h-[3.25rem] w-[16.5625rem] bg-[#121212`] hover:opacity-[0.6] transition-opacity duration-300 ease text-white rounded-[0.5rem] font-[800] border-white border-2 laptop:h-[3rem] tablet:ml-auto tablet:w-[47%] phone:w-[80%] phone:ml-0">
+          <motion.button className="h-[3.25rem] w-[16.5625rem] bg-[#121212`] hover:opacity-[0.6] transition-opacity duration-300 ease text-white rounded-[0.5rem] font-[800] border-white border-2 laptop:h-[3rem] tablet:ml-auto tablet:w-[47%] phone:w-[90%] phone:ml-0">
             Create Your Space
           </motion.button>
         </div>
