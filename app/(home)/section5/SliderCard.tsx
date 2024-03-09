@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import verifiedIcon from "@/public/images/section10icon1.png";
 import rightIcon from "@/public/images/section10icon2.svg";
-
+import CardWrapper from "@/HOC/CardWrapper";
 export interface CardType {
   id?: string;
   name: string;
@@ -42,10 +42,11 @@ const SliderCard = ({
   ];
 
   return (
-    <motion.div
+    <CardWrapper
+      //@ts-ignore
       whileHover="hover"
       variants={parentHoverVariant}
-      className="relative group text-[0.75rem] leading-[1.25rem] flex items-center overflow-hidden rounded-[0.75rem] border border-[hsla(0,0%,100%,.08)] min-w-[32%] h-[11.975rem] text-white tablet:min-w-[100%]"
+      className="relative group text-[0.75rem] leading-[1.25rem] flex items-center overflow-hidden rounded-[0.75rem] border border-[hsla(0,0%,100%,.08)] min-w-[32%] h-[11.975rem] text-white tablet:min-w-[95%] tablet:!translate-y-0"
     >
       {currentDate[1] === date.month && currentDate[2] === date.year ? (
         <div className="absolute z-[5] px-4 py-[0.1875rem] top-0 left-0 bg-[#00b88d] rounded-[0.625rem_0.25rem]">
@@ -61,6 +62,7 @@ const SliderCard = ({
         alt="card image"
         width={1000}
         height={1000}
+        priority
       />
       <div className="absolute z-[3] p-[1.25rem] bg-transparent w-full h-full">
         <div className="flex gap-6 mb-[1.5rem]">
@@ -138,7 +140,7 @@ const SliderCard = ({
           </div>
         </div>
       </div>
-    </motion.div>
+    </CardWrapper>
   );
 };
 

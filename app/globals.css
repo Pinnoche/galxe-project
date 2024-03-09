@@ -24,3 +24,14 @@
     /* Firefox */
   }
 }
+
+@font-face {
+  font-family: "mona-sans";
+  src: url("/public/fonts/Mona_Sans/Mona-Sans.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.mona-sans {
+  @apply font-[mona-sans];
+}

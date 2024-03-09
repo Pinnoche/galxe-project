@@ -3,7 +3,7 @@
 import Image from "next/image";
 import brushIcon from "@/public/images/brushIcon.png";
 import { motion } from "framer-motion";
-
+import CardWrapper from "@/HOC/CardWrapper";
 interface CardType {
   image: string;
   module: string;
@@ -45,10 +45,11 @@ const SliderCard = ({
   };
 
   return (
-    <motion.div
+    <CardWrapper
+      //@ts-ignore
       whileHover="hover"
       variants={parentHoverVariant}
-      className="snap-start min-w-[24%] h-[33.75rem] p-[1.25rem] rounded-[0.75rem] text-white bg-[linear-gradient(180deg,#1b1e24,rgba(27,30,36,.65))] tablet:min-w-[49.333%] phone:min-w-[100%]"
+      className="snap-start min-w-[24%] h-[33.75rem] p-[1.25rem] rounded-[0.75rem] text-white bg-[linear-gradient(180deg,#1b1e24,rgba(27,30,36,.65))] tablet:min-w-[46.83%] phone:min-w-[95%] tablet:!translate-y-0"
     >
       <div className="relative object-cover w-[100%] h-[68%] mb-[1.5rem]">
         <Image
@@ -80,13 +81,13 @@ const SliderCard = ({
           <Image src={brushIcon} alt="icon" width={20} height={19} />
         </div>
       </div>
-      <div className="font-bold leading-[1.5rem] text-[1rem]  mt-[1rem]">
+      <div className="font-bold leading-[1.5rem] text-[1rem]  mt-[1rem] tablet:text-[0.92rem]">
         Module {module}: {name}
       </div>
-      <div className="mt-[0.5rem] text-[#ced3db] leading-[1.375rem] whitespace-nowrap text-[0.875rem]">
+      <div className="mt-[0.5rem] text-[#ced3db] leading-[1.375rem] whitespace-nowrap text-[0.875rem] tablet:text-[0.83rem]">
         {subtext}
       </div>
-      <div className="flex mt-[0.75rem]">
+      <div className="flex mt-[0.75rem] tablet:text-[0.9rem]">
         <div>{participants.toLocaleString()} participants</div>
         <div className="flex gap-2 ml-auto">
           {cohost_icons.map((icon, index) => (
@@ -100,7 +101,7 @@ const SliderCard = ({
           ))}
         </div>
       </div>
-    </motion.div>
+    </CardWrapper>
   );
 };
 

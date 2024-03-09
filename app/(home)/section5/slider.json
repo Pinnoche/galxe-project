@@ -5,7 +5,7 @@
     "verified": true,
     "image": "/images/section101.webp",
     "active_campaigns": 0,
-    "date": { "day": 2, "month": 11, "year": 2023 },
+    "date": { "day": 2, "month": 3, "year": 2024 },
     "categories": ["Social", "Wallet", "Layer 2"],
     "backers_icons": []
   },
@@ -31,7 +31,7 @@
     "verified": true,
     "image": "/images/section103.webp",
     "active_campaigns": 1,
-    "date": { "day": 4, "month": 11, "year": 2023 },
+    "date": { "day": 4, "month": 3, "year": 2024 },
     "categories": ["Web3", "Infrastructure", "Wallet", "Privacy", "Layer 1"],
     "backers_icons": [
       "/images/section5icon1.webp",

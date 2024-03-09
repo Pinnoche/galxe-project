@@ -19,9 +19,9 @@ export default function Section2() {
       />
     ));
   return (
-    <section className="bg-[#121212] px-[4.5rem] text-white overflow-x-hidden tablet:px-[5%]">
+    <section className="bg-[#121212] px-[4.5rem] text-white overflow-x-hidden tablet:pl-[5%] tablet:pr-0">
       <div>
-        <h1 className="aboslute flex items-center justify-between font-extrabold text-4xl my-6">
+        <h1 className="aboslute flex items-center justify-between font-extrabold text-4xl my-6 tablet:mb-3  tablet:text-[1.7rem] tablet:leading-[1.75rem]">
           For You
         </h1>
         <Slider className="!gap-[2%]" childrenNumber={datas.length} offset={2}>
