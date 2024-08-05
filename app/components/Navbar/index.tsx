@@ -45,7 +45,7 @@ export default function Navbar() {
 
   return (
     <div
-      className={`fixed top-0 bg-black w-full h-20 z-[7] ${
+      className={`fixed top-0 w-full h-20 z-[7] ${
         showMenu == true ? "tablet:min-h-full" : "h-20"
       } ${
         showMenu == false
@@ -88,7 +88,7 @@ export default function Navbar() {
                 <button
                   onClick={() => setShowMenu(false)}
                   className={`bg-cover hidden tablet:mr-3 cursor-pointer tablet:block ${
-                    showMenu == false ? "tablet:hidden" : "block"
+                    !showMenu ? "tablet:hidden" : "block"
                   }`}
                 >
                   <Image src={cancel} alt="Cancel" width={20} height={20} />
@@ -101,7 +101,7 @@ export default function Navbar() {
             >
               <div
                 className={`flex tablet:grid tablet:grid-cols-1 tablet:gap-5 tablet:min-w-full tablet:p-10 tablet:text-xl tablet:font-semibold  ${
-                  showMenu == true ? "tablet:block" : "tablet:hidden"
+                  showMenu ? "tablet:block" : "tablet:hidden"
                 }`}
               >
                 <div
